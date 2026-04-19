@@ -39,18 +39,18 @@ pub fn build(b: *std.Build) void {
     });
     if (maybe_freetype_dep) |freetype_dep| {
         const freetype = freetype_dep.artifact("freetype");
-        harfbuzz.linkLibrary(freetype);
+        harfbuzz.root_module.linkLibrary(freetype);
         harfbuzz.root_module.addCMacro("HAVE_FREETYPE", "1");
     }
     if (maybe_icu_dep) |icu_dep| {
         const icuuc = icu_dep.artifact("icuuc");
-        harfbuzz.linkLibrary(icuuc);
+        harfbuzz.root_module.linkLibrary(icuuc);
         harfbuzz.root_module.addCMacro("HAVE_ICU", "1");
-        harfbuzz.addCSourceFile(.{
+        harfbuzz.root_module.addCSourceFile(.{
             .file = harfbuzz_dep.path("src/hb-icu.cc"),
         });
     }
-    harfbuzz.addCSourceFile(.{
+    harfbuzz.root_module.addCSourceFile(.{
         .file = harfbuzz_dep.path("src/harfbuzz.cc"),
     });
     b.installArtifact(harfbuzz);

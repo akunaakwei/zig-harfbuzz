@@ -1,2 +1,2 @@
 # harfbuzz
-This is harfbuzz packaged for the zig build system.
+This is [harfbuzz](https://github.com/harfbuzz/harfbuzz) packaged for the zig build system.
