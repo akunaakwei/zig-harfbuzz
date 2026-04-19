@@ -13,8 +13,8 @@
             .lazy = true,
         },
         .freetype2 = .{
-            .url = "https://github.com/akunaakwei/zig-freetype2/archive/c9955cb2e84c04c7773fd02b6f2d356b231c6d09.tar.gz",
-            .hash = "freetype2-2.14.1-8g4_vtlaAABmIX9PKnBEA0-VwD38NX7Iv59OW812hOQ2",
+            .url = "https://github.com/akunaakwei/zig-freetype2/archive/310b141c8b3f9443ec7aa158dc1e2f6cb84431b6.tar.gz",
+            .hash = "freetype2-2.14.1-8g4_vhlbAAA0m1UuUxr7A5Pn8Y0h25pNmcHT9fX3TY_d",
             .lazy = true,
         },
     },
